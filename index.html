@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Ty McGuire — UGC Creator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --bg-2: #131313;
+    --bg-3: #1c1c1c;
+    --ink: #f4f1ea;
+    --ink-dim: #a8a39b;
+    --muted: #6b6660;
+    --accent: #ff4b1f;
+    --accent-glow: rgba(255, 75, 31, 0.25);
+    --line: rgba(244, 241, 234, 0.1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+    line-height: 1.5;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.15;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background:
+      radial-gradient(ellipse 80% 50% at 80% 0%, rgba(255, 75, 31, 0.12), transparent),
+      radial-gradient(ellipse 60% 40% at 0% 50%, rgba(255, 75, 31, 0.06), transparent);
+  }
+
+  /* ============ NAV ============ */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1.25rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .logo {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    letter-spacing: -0.02em;
+  }
+  .logo .dot { color: var(--accent); font-style: italic; }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .nav-links a {
+    color: var(--ink-dim);
+    text-decoration: none;
+    position: relative;
+    padding: 0.25rem 0;
+    transition: color 0.3s;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 1px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+  }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-links a:hover::after { width: 100%; }
+
+  .nav-cta {
+    background: var(--ink);
+    color: var(--bg);
+    padding: 0.6rem 1.2rem;
+    border-radius: 100px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-weight: 500;
+  }
+  .nav-cta:hover { background: var(--accent); color: var(--ink); transform: translateY(-2px); box-shadow: 0 8px 24px var(--accent-glow); }
+
+  /* ============ HERO ============ */
+  .hero {
+    min-height: 100vh;
+    padding: 8rem 2rem 4rem;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .hero-text { position: relative; z-index: 2; }
+
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ink-dim);
+    margin-bottom: 2rem;
+  }
+  .hero-meta::before {
+    content: '';
+    width: 30px; height: 1px;
+    background: var(--accent);
+  }
+
+  .hero-name {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(3.5rem, 9vw, 8rem);
+    line-height: 0.9;
+    letter-spacing: -0.045em;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+  }
+  .hero-name .italic { font-style: italic; font-weight: 300; color: var(--accent); }
+
+  .hero-tagline {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--ink-dim);
+    margin-bottom: 2rem;
+    padding-left: 0.25rem;
+  }
+
+  .hero-sub {
+    font-size: 1.15rem;
+    max-width: 480px;
+    color: var(--ink-dim);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+  }
+
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  .btn {
+    padding: 1rem 1.75rem;
+    border-radius: 100px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  .btn-primary { background: var(--ink); color: var(--bg); }
+  .btn-primary:hover { background: var(--accent); color: var(--ink); transform: translateY(-3px); box-shadow: 0 12px 32px var(--accent-glow); }
+  .btn-secondary { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+  .btn-secondary:hover { background: var(--bg-3); border-color: var(--ink); }
+
+  .hero-photo {
+    position: relative;
+    aspect-ratio: 4/5;
+    max-height: 580px;
+    margin-left: auto;
+  }
+  .hero-photo .frame {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow:
+      0 30px 80px rgba(0,0,0,0.6),
+      0 0 0 1px rgba(255, 255, 255, 0.05),
+      0 0 60px rgba(255, 75, 31, 0.1);
+    transform: rotate(-1.5deg);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .hero-photo:hover .frame { transform: rotate(0deg) scale(1.02); }
+  .hero-photo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: contrast(1.05) saturate(1.05) brightness(0.95);
+  }
+
+  .photo-tag {
+    position: absolute;
+    bottom: 1.5rem; left: -0.5rem;
+    background: var(--accent);
+    color: var(--ink);
+    padding: 0.6rem 1rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 100px;
+    z-index: 3;
+    transform: rotate(-3deg);
+    box-shadow: 0 8px 24px var(--accent-glow);
+    font-weight: 500;
+  }
+  .photo-tag-2 {
+    position: absolute;
+    top: 1.5rem; right: 1rem;
+    background: var(--ink);
+    color: var(--bg);
+    padding: 0.6rem 1rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 100px;
+    z-index: 3;
+    transform: rotate(2deg);
+    font-weight: 500;
+  }
+
+  /* Marquee */
+  .marquee {
+    background: var(--bg-2);
+    color: var(--ink);
+    padding: 1.5rem 0;
+    overflow: hidden;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    margin-top: 2rem;
+  }
+  .marquee-track {
+    display: flex;
+    gap: 3rem;
+    animation: scroll 35s linear infinite;
+    white-space: nowrap;
+    width: max-content;
+  }
+  .marquee-item {
+    font-family: 'Fraunces', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    color: var(--ink-dim);
+  }
+  .marquee-item::after {
+    content: '✦';
+    color: var(--accent);
+    font-style: normal;
+    font-size: 1rem;
+  }
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* ============ STATS ============ */
+  .stats {
+    padding: 6rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ink-dim);
+    margin-bottom: 1.5rem;
+  }
+  .section-label::before {
+    content: '';
+    width: 30px; height: 1px;
+    background: var(--accent);
+  }
+
+  .stats-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+    align-items: end;
+  }
+  .stats-header h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    font-weight: 400;
+  }
+  .stats-header h2 .italic { font-style: italic; color: var(--accent); }
+  .stats-header p { font-size: 1.05rem; color: var(--ink-dim); max-width: 420px; }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .stat {
+    padding: 2.5rem 1.5rem;
+    border-right: 1px solid var(--line);
+    position: relative;
+    overflow: hidden;
+    transition: background 0.4s;
+  }
+  .stat:last-child { border-right: none; }
+  .stat:hover { background: var(--bg-3); }
+
+  .stat-number {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+  }
+  .stat-number .accent { color: var(--accent); font-style: italic; font-weight: 300; }
+
+  .stat-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-dim);
+    line-height: 1.5;
+  }
+
+  /* ============ ABOUT ============ */
+  .about {
+    padding: 6rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .about-image {
+    position: sticky;
+    top: 8rem;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 0 1px var(--line);
+  }
+  .about-image img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: grayscale(0.4) contrast(1.1) brightness(0.9);
+    transition: filter 0.6s;
+  }
+  .about-image:hover img { filter: grayscale(0) contrast(1.05) brightness(1); }
+
+  .about h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 2rem;
+    font-weight: 400;
+  }
+  .about h2 .italic { font-style: italic; color: var(--accent); }
+
+  .about-bio {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--ink-dim);
+    margin-bottom: 2rem;
+  }
+  .about-bio strong { color: var(--accent); font-weight: 600; }
+
+  .credentials { display: grid; gap: 0; margin-top: 2.5rem; }
+
+  .cred {
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 1.5rem;
+    align-items: center;
+    transition: padding 0.3s;
+  }
+  .cred:hover { padding-left: 1rem; }
+  .cred:last-child { border-bottom: 1px solid var(--line); }
+
+  .cred-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--accent);
+  }
+  .cred-text {
+    font-family: 'Fraunces', serif;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+  .cred-text .italic { font-style: italic; color: var(--ink-dim); }
+
+  /* ============ WORK / PORTFOLIO ============ */
+  .portfolio {
+    padding: 6rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .portfolio-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+    align-items: end;
+  }
+  .portfolio-header h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    font-weight: 400;
+  }
+  .portfolio-header h2 .italic { font-style: italic; color: var(--accent); }
+  .portfolio-header p { color: var(--ink-dim); font-size: 1.05rem; max-width: 420px; }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .work-card {
+    aspect-ratio: 9/16;
+    background: var(--bg-2);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.4s, box-shadow 0.4s, border-color 0.4s;
+    border: 1px solid var(--line);
+  }
+  .work-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4), 0 0 30px rgba(255, 75, 31, 0.1);
+    border-color: rgba(255, 75, 31, 0.3);
+  }
+
+  .work-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.25rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%);
+    color: var(--ink);
+    z-index: 10;
+    pointer-events: none;
+  }
+  .work-card video, .work-card img.card-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .work-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.85;
+  }
+
+  .play-icon {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .work-card:hover .play-icon {
+    background: var(--accent);
+    transform: scale(1.1);
+    border-color: var(--accent);
+  }
+
+  .work-info h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.4rem;
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+  }
+  .work-info h4 .italic { font-style: italic; }
+  .work-info p {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.75;
+  }
+
+  /* ============ SERVICES ============ */
+  .services {
+    background: var(--bg-2);
+    color: var(--ink);
+    padding: 6rem 2rem;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .services-inner { max-width: 1400px; margin: 0 auto; }
+
+  .services h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 4rem;
+    max-width: 700px;
+    font-weight: 400;
+  }
+  .services h2 .italic { font-style: italic; color: var(--accent); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    background: var(--bg-3);
+    border: 1px solid var(--line);
+    padding: 2rem;
+    border-radius: 12px;
+    transition: all 0.4s;
+    position: relative;
+    overflow: hidden;
+  }
+  .service-card:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px var(--accent-glow);
+  }
+
+  .service-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    transition: color 0.3s;
+  }
+  .service-card:hover .service-num { color: var(--bg); }
+
+  .service-card h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.75rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    color: var(--ink);
+    transition: color 0.3s;
+  }
+  .service-card:hover h3 { color: var(--bg); }
+  .service-card h3 .italic { font-style: italic; }
+
+  .service-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--ink-dim);
+    transition: color 0.3s;
+  }
+  .service-card:hover p { color: var(--bg); }
+
+  /* ============ CONTACT ============ */
+  .contact {
+    padding: 8rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+  }
+
+  .contact h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(3rem, 9vw, 8rem);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    margin-bottom: 2rem;
+    font-weight: 400;
+  }
+  .contact h2 .italic { font-style: italic; color: var(--accent); }
+
+  .contact p {
+    color: var(--ink-dim);
+    font-size: 1.2rem;
+    max-width: 500px;
+    margin: 0 auto 3rem;
+  }
+
+  .contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--ink);
+    color: var(--bg);
+    padding: 1.5rem 3rem;
+    border-radius: 100px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-weight: 500;
+  }
+  .contact-btn:hover {
+    background: var(--accent);
+    color: var(--ink);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px var(--accent-glow);
+  }
+
+  .arrow { transition: transform 0.3s; }
+  .contact-btn:hover .arrow { transform: translateX(6px); }
+
+  /* ============ FOOTER ============ */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-dim);
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .footer-socials { display: flex; gap: 2rem; }
+  .footer-socials a { color: var(--ink); text-decoration: none; transition: color 0.3s; }
+  .footer-socials a:hover { color: var(--accent); }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 900px) {
+    nav { padding: 1rem; }
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 4rem; }
+    .hero-photo { max-height: 450px; margin: 0 auto; max-width: 360px; width: 100%; }
+    .stats-header, .portfolio-header { grid-template-columns: 1fr; gap: 2rem; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat { border-right: none; border-bottom: 1px solid var(--line); }
+    .stat:nth-child(2) { border-right: none; }
+    .stat:nth-child(odd) { border-right: 1px solid var(--line); }
+    .stat:nth-last-child(-n+2) { border-bottom: none; }
+    .about { grid-template-columns: 1fr; gap: 3rem; }
+    .about-image { position: static; max-width: 400px; }
+    .services-grid, .portfolio-grid { grid-template-columns: 1fr; }
+    .stats, .about, .services, .portfolio, .contact { padding: 4rem 1.5rem; }
+    footer { flex-direction: column; gap: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Ty McGuire<span class="dot">.</span></div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Book Me →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text reveal">
+    <div class="hero-meta">UGC Creator · Available for Projects · 2026</div>
+    <h1 class="hero-name">
+      Ty<br>
+      <span class="italic">McGuire</span>
+    </h1>
+    <div class="hero-tagline">UGC Creator · E-Comm Strategist</div>
+    <p class="hero-sub">
+      Authentic, high-performing user-generated content for brands that want results.
+      Turning scrolls into sales — and counting.
+    </p>
+    <div class="hero-actions">
+      <a href="#work" class="btn btn-primary">View My Work →</a>
+      <a href="#contact" class="btn btn-secondary">Let's Talk</a>
+    </div>
+  </div>
+
+  <div class="hero-photo reveal">
+    <div class="frame">
+      <img src="profile.jpg" alt="Ty McGuire portrait" />
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span class="marquee-item">Lifestyle</span>
+    <span class="marquee-item">Beauty</span>
+    <span class="marquee-item">Tech</span>
+    <span class="marquee-item">Fitness</span>
+    <span class="marquee-item">Finance</span>
+    <span class="marquee-item">E-Commerce</span>
+    <span class="marquee-item">Apparel</span>
+    <span class="marquee-item">Food &amp; Bev</span>
+    <span class="marquee-item">Lifestyle</span>
+    <span class="marquee-item">Beauty</span>
+    <span class="marquee-item">Tech</span>
+    <span class="marquee-item">Fitness</span>
+    <span class="marquee-item">Finance</span>
+    <span class="marquee-item">E-Commerce</span>
+    <span class="marquee-item">Apparel</span>
+    <span class="marquee-item">Food &amp; Bev</span>
+  </div>
+</div>
+
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-image reveal">
+    <img src="profile.jpg" alt="Ty McGuire" />
+  </div>
+  <div class="reveal">
+    <div class="section-label">About Me</div>
+    <h2>Creating content that <span class="italic">converts.</span></h2>
+    <p class="about-bio">
+      I'm Ty McGuire — a UGC creator that treats your budget like my own.
+      I don't just focus on making content that <strong>looks good</strong> — I make content that <strong>drives action</strong>.
+      I've personally generated over <strong>$500K for brands directly from my videos</strong>,
+      and I've successfully scaled mass-volume affiliate marketing campaigns focused purely on conversion.
+    </p>
+
+    <div class="credentials">
+      <div class="cred">
+        <span class="cred-num">/01</span>
+        <span class="cred-text">$500K+ <span class="italic">Generated for Brands</span></span>
+      </div>
+      <div class="cred">
+        <span class="cred-num">/02</span>
+        <span class="cred-text">Mass Volume <span class="italic">Affiliate Background</span></span>
+      </div>
+      <div class="cred">
+        <span class="cred-num">/03</span>
+        <span class="cred-text">Worked with brands like <span class="italic">Cluely &amp; Bolt.new</span></span>
+      </div>
+      <div class="cred" style="border-bottom: 1px solid var(--line);">
+        <span class="cred-num">/04</span>
+        <span class="cred-text">Bachelor's Degree <span class="italic">in Finance</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLATFORMS -->
+<section class="portfolio" id="platforms" style="padding-bottom: 2rem;">
+  <div class="portfolio-header reveal" style="margin-bottom: 2rem;">
+    <div>
+      <div class="section-label">Partnerships</div>
+      <h3 style="font-size: 2rem; margin-top: 0.5rem; line-height: 1.2;">Trusted by Companies like <span class="italic">Cluely.</span></h3>
+    </div>
+  </div>
+
+  <div class="portfolio-grid reveal" style="grid-template-columns: 1fr; max-width: 340px; margin: 0 auto;">
+    <div class="work-card" style="aspect-ratio: auto; padding-bottom: 0; border: none; background: transparent;">
+      <img src="assets/Screenshot - Edited.jpg" style="display: block; width: 100%; border-radius: 8px; box-shadow: 0 20px 50px rgba(0,0,0,0.4), 0 0 30px rgba(255, 75, 31, 0.1);" alt="Recruited by platforms">
+    </div>
+  </div>
+</section>
+
+<!-- WORK / PORTFOLIO -->
+<section class="portfolio" id="work" style="padding-top: 2rem;">
+  <div class="portfolio-header reveal">
+    <div>
+      <div class="section-label">Selected Work</div>
+      <h2>Recent <span class="italic">projects.</span></h2>
+    </div>
+  </div>
+
+  <div class="portfolio-grid reveal">
+    <div class="work-card">
+      <video src="assets/cluely.MOV" autoplay loop muted playsinline controls></video>
+      <div class="work-placeholder">
+        <div class="work-top">
+          <span>01 / TIKTOK</span>
+        </div>
+        <div class="work-info">
+          <h4>Cluely (Bounty)</h4>
+        </div>
+      </div>
+    </div>
+    <div class="work-card">
+      <video src="assets/AirLearn.MOV" autoplay loop muted playsinline controls></video>
+      <div class="work-placeholder">
+        <div class="work-top">
+          <span>02 / TIKTOK</span>
+        </div>
+        <div class="work-info">
+          <h4>AirLearn</h4>
+        </div>
+      </div>
+    </div>
+    <div class="work-card">
+      <video src="assets/Bolt.new.MOV" autoplay loop muted playsinline controls></video>
+      <div class="work-placeholder">
+        <div class="work-top">
+          <span>03 / REELS</span>
+        </div>
+        <div class="work-info">
+          <h4>Bolt.new</h4>
+        </div>
+      </div>
+    </div>
+    <div class="work-card">
+      <video src="assets/MagCubic.MP4" autoplay loop muted playsinline controls></video>
+      <div class="work-placeholder">
+        <div class="work-top">
+          <span>04 / TIKTOK</span>
+        </div>
+        <div class="work-info">
+          <h4>MagCubic</h4>
+        </div>
+      </div>
+    </div>
+    <div class="work-card">
+      <video src="assets/TreadeVisor.AI.MOV" autoplay loop muted playsinline controls></video>
+      <div class="work-placeholder">
+        <div class="work-top">
+          <span>05 / IG STORY</span>
+        </div>
+        <div class="work-info">
+          <h4>TreadeVisor.AI</h4>
+        </div>
+      </div>
+    </div>
+    <div class="work-card">
+      <video src="assets/Uncommon Ramen.MP4" autoplay loop muted playsinline controls></video>
+      <div class="work-placeholder">
+        <div class="work-top">
+          <span>06 / SHORTS</span>
+        </div>
+        <div class="work-info">
+          <h4>Uncommon Ramen</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MASS AFFILIATE -->
+<section class="portfolio" id="mass-affiliate" style="padding-top: 4rem; padding-bottom: 4rem;">
+  <div class="reveal" style="display: flex; flex-wrap: wrap; gap: 4rem; max-width: 850px; margin: 0 auto; align-items: center; justify-content: center;">
+    
+    <!-- Image on the left -->
+    <div style="flex: 1 1 300px; max-width: 300px;">
+      <div class="work-card" style="aspect-ratio: auto; padding-bottom: 0; border: none; background: transparent;">
+        <img src="assets/Mass content.jpg" style="display: block; width: 100%; border-radius: 8px; box-shadow: 0 20px 50px rgba(0,0,0,0.4), 0 0 30px rgba(255, 75, 31, 0.1);" alt="Mass Affiliate Content at Scale">
+      </div>
+    </div>
+
+    <!-- Text on the right -->
+    <div style="flex: 1 1 400px; text-align: left; color: #ffffff;">
+      <div class="section-label" style="justify-content: flex-start; margin-bottom: 1rem;">TikTok Shop</div>
+      <h2 style="font-size: clamp(2rem, 4vw, 2.5rem); margin-bottom: 1.5rem; line-height: 1.1;">Mass Affiliate Content<br><span class="italic">at Scale.</span></h2>
+      <p style="font-size: 1.1rem; line-height: 1.6; color: #ffffff; opacity: 0.9;">
+        Over the past 12 months, I've managed 5-10 TikTok Shop affiliate pages simultaneously posting anywhere from 50 to 150 posts a day, varying from AI to in-real-life content. I make content that is built for conversion.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- MAGCUBIC SALES -->
+<section class="portfolio" id="magcubic-sales">
+  <div class="portfolio-header reveal">
+    <div>
+      <div class="section-label">Live Stream Results</div>
+      <h2>Over 80k generated for MagCubic <span class="italic">via live stream.</span></h2>
+    </div>
+  </div>
+
+  <div class="portfolio-grid reveal" style="grid-template-columns: repeat(2, 1fr); max-width: 800px; margin: 0 auto;">
+    <div class="work-card">
+      <img src="assets/IMG_0208.PNG" class="card-img" alt="MagCubic Sales Proof 1">
+    </div>
+    <div class="work-card">
+      <img src="assets/IMG_0210.PNG" class="card-img" alt="MagCubic Sales Proof 2">
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="reveal">
+    <div class="section-label" style="justify-content: center;">Let's Build</div>
+    <h2>Got a brand?<br>Let's <span class="italic">make it sell.</span></h2>
+    <p>Open to UGC, affiliate partnerships, paid creative, and ongoing creator retainers.</p>
+    
+    <div style="margin: 3rem 0; font-family: 'JetBrains Mono', monospace; font-size: 1.15rem; line-height: 2;">
+      <div><a href="mailto:Ty@Rendr-Studios.com" style="color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 2px;">Ty@Rendr-Studios.com</a></div>
+      <div style="margin-top: 1rem;"><a href="tel:2245720652" style="color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 2px;">224-572-0652</a></div>
+    </div>
+
+    <a href="#" class="contact-btn" data-cal-link="ty-mcguire-bfmkql/15min" data-cal-namespace="15min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+      Book a Call <span class="arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div>© 2026 Ty McGuire · All Rights Reserved</div>
+  <div class="footer-socials">
+    <a href="#">Instagram</a>
+    <a href="#">TikTok</a>
+    <a href="#">Email</a>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+<!-- Cal element-click embed code begins -->
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", "15min", {origin:"https://app.cal.com"});
+  Cal.ns["15min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+</script>
+<!-- Cal element-click embed code ends -->
+
+</body>
+</html>
