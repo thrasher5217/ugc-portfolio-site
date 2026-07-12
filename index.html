@@ -181,6 +181,36 @@
     line-height: 1.6;
   }
 
+  .hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  .hero-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.85rem 1.25rem;
+    border: 1px solid rgba(255, 75, 31, 0.35);
+    border-radius: 14px;
+    background: rgba(255, 75, 31, 0.06);
+  }
+  .hero-stat .stat-num {
+    font-family: 'Fraunces', serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .hero-stat .stat-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-dim);
+  }
+
   .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
 
   .btn {
@@ -552,6 +582,14 @@
     margin-bottom: 0.5rem;
   }
   .work-info h4 .italic { font-style: italic; }
+  .work-info .views {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    margin-top: 0.35rem;
+  }
   .work-info p {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.65rem;
@@ -762,6 +800,16 @@
       Authentic, high-performing user-generated content for brands that want results.
       Turning scrolls into sales every single day.
     </p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="stat-num">10M+</span>
+        <span class="stat-label">Personal UGC Views</span>
+      </div>
+      <div class="hero-stat">
+        <span class="stat-num">10M+</span>
+        <span class="stat-label">Views From Managed Campaigns</span>
+      </div>
+    </div>
     <div class="hero-actions">
       <a href="#work" class="btn btn-primary">View My Work →</a>
       <a href="#contact" class="btn btn-secondary">Let's Talk</a>
@@ -834,22 +882,6 @@
   </div>
 </section>
 
-<!-- PLATFORMS -->
-<section class="portfolio" id="platforms" style="padding-bottom: 2rem;">
-  <div class="portfolio-header reveal" style="margin-bottom: 2rem;">
-    <div>
-      <div class="section-label">Partnerships</div>
-      <h3 style="font-size: 2rem; margin-top: 0.5rem; line-height: 1.2;">Trusted by Companies like <span class="italic">Cluely.</span></h3>
-    </div>
-  </div>
-
-  <div class="portfolio-grid reveal" style="grid-template-columns: 1fr; max-width: 340px; margin: 0 auto;">
-    <div class="work-card" style="aspect-ratio: auto; padding-bottom: 0; border: none; background: transparent;">
-      <img src="assets/Screenshot - Edited.jpg" style="display: block; width: 100%; border-radius: 8px; box-shadow: 0 20px 50px rgba(0,0,0,0.4), 0 0 30px rgba(255, 75, 31, 0.1);" alt="Recruited by platforms">
-    </div>
-  </div>
-</section>
-
 <!-- WORK / PORTFOLIO -->
 <section class="portfolio" id="work" style="padding-top: 2rem;">
   <div class="portfolio-header reveal">
@@ -868,6 +900,7 @@
         </div>
         <div class="work-info">
           <h4>Cluely (Areum)</h4>
+          <p class="views">1M+ Views Generated</p>
         </div>
       </div>
     </div>
@@ -879,6 +912,7 @@
         </div>
         <div class="work-info">
           <h4>AirLearn</h4>
+          <p class="views">4M+ Views Generated Across Campaign</p>
         </div>
       </div>
     </div>
