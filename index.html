@@ -409,29 +409,9 @@
   /* ============ ABOUT ============ */
   .about {
     padding: 6rem 2rem;
-    max-width: 1400px;
+    max-width: 850px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1.3fr;
-    gap: 5rem;
-    align-items: start;
   }
-
-  .about-image {
-    position: sticky;
-    top: 8rem;
-    aspect-ratio: 3/4;
-    overflow: hidden;
-    border-radius: 6px;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 0 1px var(--line);
-  }
-  .about-image img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    filter: grayscale(0.4) contrast(1.1) brightness(0.9);
-    transition: filter 0.6s;
-  }
-  .about-image:hover img { filter: grayscale(0) contrast(1.05) brightness(1); }
 
   .about h2 {
     font-family: 'Fraunces', serif;
@@ -542,14 +522,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 1;
-  }
-  .work-card iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
     z-index: 1;
   }
 
@@ -768,15 +740,13 @@
     nav { padding: 1rem; }
     .nav-links { display: none; }
     .hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 4rem; }
-    .hero-photo { display: none; }
+    .hero-photo { max-width: 400px; margin: 0 auto; }
     .stats-header, .portfolio-header { grid-template-columns: 1fr; gap: 2rem; }
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
     .stat { border-right: none; border-bottom: 1px solid var(--line); }
     .stat:nth-child(2) { border-right: none; }
     .stat:nth-child(odd) { border-right: 1px solid var(--line); }
     .stat:nth-last-child(-n+2) { border-bottom: none; }
-    .about { grid-template-columns: 1fr; gap: 3rem; }
-    .about-image { position: static; max-width: 400px; }
     .services-grid, .portfolio-grid { grid-template-columns: 1fr; }
     .stats, .about, .services, .portfolio, .contact { padding: 4rem 1.5rem; }
     footer { flex-direction: column; gap: 1rem; }
@@ -856,9 +826,6 @@
 
 <!-- ABOUT -->
 <section class="about" id="about">
-  <div class="about-image reveal">
-    <img src="profile.jpg" alt="Ty McGuire" />
-  </div>
   <div class="reveal">
     <div class="section-label">About Me</div>
     <h2>Creating content that <span class="italic">converts.</span></h2>
@@ -908,7 +875,7 @@
         </div>
         <div class="work-info">
           <h4>Cluely (Areum)</h4>
-          <p class="views">1M+ Views Generated</p>
+          <p class="views">1 Million+ Views Generated For Campaign</p>
         </div>
       </div>
     </div>
@@ -925,24 +892,14 @@
       </div>
     </div>
     <div class="work-card">
-      <video src="assets/Bolt.new.MOV" autoplay loop muted playsinline controls></video>
+      <video src="assets/Bolt.new.mp4" autoplay loop muted playsinline controls></video>
       <div class="work-placeholder">
         <div class="work-top">
           <span>03 / REELS</span>
         </div>
         <div class="work-info">
           <h4>Bolt.new</h4>
-        </div>
-      </div>
-    </div>
-    <div class="work-card">
-      <video src="assets/MagCubic.MP4" autoplay loop muted playsinline controls></video>
-      <div class="work-placeholder">
-        <div class="work-top">
-          <span>04 / TIKTOK</span>
-        </div>
-        <div class="work-info">
-          <h4>MagCubic</h4>
+          <p class="views">1 Million+ Views Generated For Campaign</p>
         </div>
       </div>
     </div>
@@ -950,7 +907,7 @@
       <video src="assets/TreadeVisor.AI.MOV" autoplay loop muted playsinline controls></video>
       <div class="work-placeholder">
         <div class="work-top">
-          <span>05 / IG STORY</span>
+          <span>04 / IG STORY</span>
         </div>
         <div class="work-info">
           <h4>TreadeVisor.AI</h4>
@@ -958,25 +915,13 @@
       </div>
     </div>
     <div class="work-card">
-      <video src="assets/Uncommon Ramen.MP4" autoplay loop muted playsinline controls></video>
+      <video src="assets/Polifly.io.mp4" autoplay loop muted playsinline controls></video>
       <div class="work-placeholder">
         <div class="work-top">
-          <span>06 / SHORTS</span>
+          <span>05 / REELS</span>
         </div>
         <div class="work-info">
-          <h4>Uncommon Ramen</h4>
-        </div>
-      </div>
-    </div>
-    <div class="work-card">
-      <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F991304723892322&show_text=false&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-      <div class="work-placeholder">
-        <div class="work-top">
-          <span>07 / FACEBOOK</span>
-        </div>
-        <div class="work-info">
-          <h4>Winners</h4>
-          <p class="views">594,000 Views</p>
+          <h4>Polifly.io</h4>
         </div>
       </div>
     </div>
