@@ -1035,7 +1035,10 @@
     .hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 4rem; }
     .hero-photo { max-width: 400px; margin: 0 auto; }
     .stats-header, .portfolio-header { grid-template-columns: 1fr; gap: 2rem; }
-    .portfolio-grid { grid-template-columns: 1fr; }
+    .portfolio-grid { 
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 1.5rem; 
+    }
     .stats, .about, .portfolio, .contact, .featured-showcase { padding: 4rem 1.5rem; }
     footer { flex-direction: column; gap: 1rem; }
   }
@@ -1045,6 +1048,12 @@
     .leaderboard-stats-grid { grid-template-columns: 1fr; }
     .spotlight-card { padding: 1.5rem; }
     .leaderboard-banner { padding: 1.5rem; }
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      max-width: 380px;
+      margin: 0 auto;
+    }
   }
 </style>
 </head>
@@ -1375,9 +1384,9 @@
     </div>
   </div>
 
-  <div class="portfolio-grid reveal">
-    <div class="work-card">
-      <video src="assets/AirLearn.MOV" autoplay loop muted playsinline controls></video>
+  <div class="portfolio-grid">
+    <div class="work-card reveal">
+      <video src="assets/AirLearn.MOV" autoplay loop muted playsinline webkit-playsinline preload="metadata"></video>
       <div class="work-placeholder">
         <div class="work-top">
           <span>01</span>
@@ -1388,8 +1397,8 @@
         </div>
       </div>
     </div>
-    <div class="work-card">
-      <video src="assets/Cluely-Regen.mp4" autoplay loop muted playsinline controls></video>
+    <div class="work-card reveal">
+      <video src="assets/Cluely-Regen.mp4" autoplay loop muted playsinline webkit-playsinline preload="metadata"></video>
       <div class="work-placeholder">
         <div class="work-top">
           <span>02</span>
@@ -1400,8 +1409,8 @@
         </div>
       </div>
     </div>
-    <div class="work-card">
-      <video src="assets/Bolt.new.mp4" autoplay loop muted playsinline controls></video>
+    <div class="work-card reveal">
+      <video src="assets/Bolt.new.mp4" autoplay loop muted playsinline webkit-playsinline preload="metadata"></video>
       <div class="work-placeholder">
         <div class="work-top">
           <span>03</span>
@@ -1412,8 +1421,8 @@
         </div>
       </div>
     </div>
-    <div class="work-card">
-      <video src="assets/cluely-areum.mp4" autoplay loop muted playsinline controls></video>
+    <div class="work-card reveal">
+      <video src="assets/cluely-areum.mp4" autoplay loop muted playsinline webkit-playsinline preload="metadata"></video>
       <div class="work-placeholder">
         <div class="work-top">
           <span>04</span>
@@ -1424,8 +1433,8 @@
         </div>
       </div>
     </div>
-    <div class="work-card">
-      <video src="assets/vugola.mp4" autoplay loop muted playsinline controls></video>
+    <div class="work-card reveal">
+      <video src="assets/vugola.mp4" autoplay loop muted playsinline webkit-playsinline preload="metadata"></video>
       <div class="work-placeholder">
         <div class="work-top">
           <span>05</span>
@@ -1435,8 +1444,8 @@
         </div>
       </div>
     </div>
-    <div class="work-card">
-      <video src="assets/Happenstance.mp4" autoplay loop muted playsinline controls></video>
+    <div class="work-card reveal">
+      <video src="assets/Happenstance.mp4" autoplay loop muted playsinline webkit-playsinline preload="metadata"></video>
       <div class="work-placeholder">
         <div class="work-top">
           <span>06</span>
@@ -1446,8 +1455,8 @@
         </div>
       </div>
     </div>
-    <div class="work-card">
-      <video src="assets/Content Rewards.mp4" autoplay loop muted playsinline controls></video>
+    <div class="work-card reveal">
+      <video src="assets/Content Rewards.mp4" autoplay loop muted playsinline webkit-playsinline preload="metadata"></video>
       <div class="work-placeholder">
         <div class="work-top">
           <span>07</span>
@@ -1457,8 +1466,8 @@
         </div>
       </div>
     </div>
-    <div class="work-card">
-      <video src="assets/Polifly.io.mp4" autoplay loop muted playsinline controls></video>
+    <div class="work-card reveal">
+      <video src="assets/Polifly.io.mp4" autoplay loop muted playsinline webkit-playsinline preload="metadata"></video>
       <div class="work-placeholder">
         <div class="work-top">
           <span>08</span>
@@ -1468,8 +1477,8 @@
         </div>
       </div>
     </div>
-    <div class="work-card">
-      <video src="assets/Tesana.ai.MP4" autoplay loop muted playsinline controls></video>
+    <div class="work-card reveal">
+      <video src="assets/Tesana.ai.MP4" autoplay loop muted playsinline webkit-playsinline preload="metadata"></video>
       <div class="work-placeholder">
         <div class="work-top">
           <span>09</span>
@@ -1479,8 +1488,8 @@
         </div>
       </div>
     </div>
-    <div class="work-card">
-      <video src="assets/WeltPixel.mp4" autoplay loop muted playsinline controls></video>
+    <div class="work-card reveal">
+      <video src="assets/WeltPixel.mp4" autoplay loop muted playsinline webkit-playsinline preload="metadata"></video>
       <div class="work-placeholder">
         <div class="work-top">
           <span>10</span>
@@ -1490,8 +1499,8 @@
         </div>
       </div>
     </div>
-    <div class="work-card">
-      <video src="assets/TreadeVisor.AI.MOV" autoplay loop muted playsinline controls></video>
+    <div class="work-card reveal">
+      <video src="assets/TreadeVisor.AI.MOV" autoplay loop muted playsinline webkit-playsinline preload="metadata"></video>
       <div class="work-placeholder">
         <div class="work-top">
           <span>11</span>
@@ -1580,16 +1589,50 @@
 </div>
 
 <script>
-  // Scroll reveal
+  // Scroll reveal with eager trigger & fallback
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  }, { threshold: 0.01, rootMargin: '100px 0px 100px 0px' });
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Fallback to guarantee visibility on mobile devices or fast scrolling
+  const ensureVisible = () => {
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight + 150) {
+        el.classList.add('visible');
+      }
+    });
+  };
+  window.addEventListener('scroll', ensureVisible, { passive: true });
+  window.addEventListener('resize', ensureVisible, { passive: true });
+  document.addEventListener('DOMContentLoaded', ensureVisible);
+  setTimeout(ensureVisible, 100);
+  setTimeout(ensureVisible, 400);
+
+  // Mobile video playback handler
+  const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const video = entry.target;
+      if (entry.isIntersecting) {
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('video').forEach(v => {
+    v.muted = true;
+    v.setAttribute('playsinline', '');
+    v.setAttribute('webkit-playsinline', '');
+    videoObserver.observe(v);
+  });
 
   // Lightbox Modal Functionality
   const modal = document.getElementById('lightboxModal');
