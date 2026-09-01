@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Ty McGuire — UGC Creator</title>
+<title>Ty McGuire — UGC Creator & E-Comm Strategist | 20M+ Views</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=JetBrains+Mono:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #0a0a0a;
@@ -175,7 +175,7 @@
 
   .hero-sub {
     font-size: 1.15rem;
-    max-width: 480px;
+    max-width: 500px;
     color: var(--ink-dim);
     margin-bottom: 2.5rem;
     line-height: 1.6;
@@ -198,7 +198,7 @@
   }
   .hero-stat .stat-num {
     font-family: 'Fraunces', serif;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-weight: 500;
     color: var(--accent);
     line-height: 1;
@@ -260,38 +260,6 @@
     filter: contrast(1.05) saturate(1.05) brightness(0.95);
   }
 
-  .photo-tag {
-    position: absolute;
-    bottom: 1.5rem; left: -0.5rem;
-    background: var(--accent);
-    color: var(--ink);
-    padding: 0.6rem 1rem;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    border-radius: 100px;
-    z-index: 3;
-    transform: rotate(-3deg);
-    box-shadow: 0 8px 24px var(--accent-glow);
-    font-weight: 500;
-  }
-  .photo-tag-2 {
-    position: absolute;
-    top: 1.5rem; right: 1rem;
-    background: var(--ink);
-    color: var(--bg);
-    padding: 0.6rem 1rem;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    border-radius: 100px;
-    z-index: 3;
-    transform: rotate(2deg);
-    font-weight: 500;
-  }
-
   /* Marquee */
   .marquee {
     background: var(--bg-2);
@@ -329,10 +297,10 @@
     100% { transform: translateX(-50%); }
   }
 
-  /* ============ STATS ============ */
-  .stats {
+  /* ============ ABOUT ============ */
+  .about {
     padding: 6rem 2rem;
-    max-width: 1400px;
+    max-width: 850px;
     margin: 0 auto;
   }
 
@@ -351,67 +319,6 @@
     content: '';
     width: 30px; height: 1px;
     background: var(--accent);
-  }
-
-  .stats-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    margin-bottom: 4rem;
-    align-items: end;
-  }
-  .stats-header h2 {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    line-height: 1;
-    letter-spacing: -0.03em;
-    font-weight: 400;
-  }
-  .stats-header h2 .italic { font-style: italic; color: var(--accent); }
-  .stats-header p { font-size: 1.05rem; color: var(--ink-dim); max-width: 420px; }
-
-  .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0;
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-  }
-  .stat {
-    padding: 2.5rem 1.5rem;
-    border-right: 1px solid var(--line);
-    position: relative;
-    overflow: hidden;
-    transition: background 0.4s;
-  }
-  .stat:last-child { border-right: none; }
-  .stat:hover { background: var(--bg-3); }
-
-  .stat-number {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(2.5rem, 4vw, 3.5rem);
-    line-height: 1;
-    letter-spacing: -0.03em;
-    color: var(--ink);
-    font-weight: 400;
-    margin-bottom: 0.75rem;
-  }
-  .stat-number .accent { color: var(--accent); font-style: italic; font-weight: 300; }
-
-  .stat-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--ink-dim);
-    line-height: 1.5;
-  }
-
-  /* ============ ABOUT ============ */
-  .about {
-    padding: 6rem 2rem;
-    max-width: 850px;
-    margin: 0 auto;
   }
 
   .about h2 {
@@ -458,6 +365,418 @@
     color: var(--ink);
   }
   .cred-text .italic { font-style: italic; color: var(--ink-dim); }
+
+  /* ============ FEATURED SHOWCASE / BREAKTHROUGHS ============ */
+  .featured-showcase {
+    padding: 6rem 2rem 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .featured-header {
+    margin-bottom: 3.5rem;
+  }
+  .featured-header h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.5rem, 5.5vw, 4.2rem);
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+    font-weight: 400;
+    max-width: 960px;
+  }
+  .featured-header h2 .italic { font-style: italic; color: var(--accent); }
+  .featured-header p {
+    font-size: 1.1rem;
+    color: var(--ink-dim);
+    max-width: 680px;
+    margin-top: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Leaderboard Proof Banner */
+  .leaderboard-banner {
+    background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(255, 75, 31, 0.14), transparent), var(--bg-2);
+    border: 1px solid rgba(255, 75, 31, 0.35);
+    border-radius: 20px;
+    padding: 2.75rem;
+    margin-bottom: 4rem;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 40px rgba(255, 75, 31, 0.08);
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .leaderboard-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 75, 31, 0.15);
+    color: var(--accent);
+    border: 1px solid rgba(255, 75, 31, 0.4);
+    padding: 0.4rem 0.85rem;
+    border-radius: 100px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+  }
+
+  .leaderboard-content h3 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+  .leaderboard-content h3 .italic { font-style: italic; color: var(--accent); }
+
+  .leaderboard-desc {
+    color: var(--ink-dim);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .leaderboard-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .l-stat-box {
+    background: var(--bg-3);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1.1rem 1.25rem;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .l-stat-box:hover {
+    border-color: rgba(255, 75, 31, 0.4);
+    transform: translateY(-2px);
+  }
+  .l-stat-val {
+    font-family: 'Fraunces', serif;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 0.35rem;
+  }
+  .l-stat-lbl {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-dim);
+  }
+
+  .leaderboard-img-wrap {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+    cursor: zoom-in;
+    transition: transform 0.4s, border-color 0.4s;
+    background: #000;
+  }
+  .leaderboard-img-wrap:hover {
+    transform: scale(1.02);
+    border-color: var(--accent);
+  }
+  .leaderboard-img-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .img-zoom-hint {
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0.75rem;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: var(--ink-dim);
+    padding: 0.35rem 0.65rem;
+    border-radius: 100px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    pointer-events: none;
+  }
+
+  /* Campaign Spotlight Cards */
+  .spotlight-card {
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 3rem;
+    margin-bottom: 3.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s;
+  }
+  .spotlight-card:hover {
+    border-color: rgba(255, 75, 31, 0.3);
+  }
+
+  .spotlight-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    background: rgba(255, 75, 31, 0.1);
+    padding: 0.4rem 0.85rem;
+    border-radius: 100px;
+    border: 1px solid rgba(255, 75, 31, 0.25);
+  }
+
+  /* Higgsfield Split Layout */
+  .higgs-layout {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 3.5rem;
+    align-items: start;
+  }
+
+  .higgs-video-col {
+    position: relative;
+  }
+
+  .higgs-video-frame {
+    aspect-ratio: 9/16;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid rgba(255, 75, 31, 0.3);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 30px rgba(255, 75, 31, 0.15);
+    position: relative;
+  }
+  .higgs-video-frame video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .video-floating-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(10, 10, 10, 0.88);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 75, 31, 0.4);
+    color: var(--ink);
+    padding: 0.45rem 0.85rem;
+    border-radius: 100px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    z-index: 5;
+  }
+
+  .higgs-notice-box {
+    margin-top: 1rem;
+    background: rgba(255, 75, 31, 0.08);
+    border: 1px dashed rgba(255, 75, 31, 0.35);
+    border-radius: 10px;
+    padding: 0.9rem 1.1rem;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--ink-dim);
+  }
+  .higgs-notice-box strong { color: var(--accent); }
+
+  .higgs-details-col h3 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: 1.25rem;
+  }
+  .higgs-details-col h3 .italic { font-style: italic; color: var(--accent); }
+
+  .higgs-details-col p {
+    font-size: 1.05rem;
+    color: var(--ink-dim);
+    line-height: 1.65;
+    margin-bottom: 2rem;
+  }
+
+  .metrics-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  .metric-card {
+    background: var(--bg-3);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1.25rem;
+    transition: all 0.3s;
+  }
+  .metric-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+  }
+  .metric-card .num {
+    font-family: 'Fraunces', serif;
+    font-size: 1.85rem;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+  .metric-card .lbl {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-dim);
+    line-height: 1.4;
+  }
+
+  .higgs-proof-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .proof-row {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 1.5rem;
+  }
+
+  .proof-item {
+    background: var(--bg-3);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: zoom-in;
+    transition: all 0.3s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .proof-item:hover {
+    border-color: rgba(255, 75, 31, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(0,0,0,0.5);
+  }
+  .proof-img-frame {
+    height: 220px;
+    width: 100%;
+    background: #080808;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .proof-img-frame img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+  .proof-caption {
+    padding: 0.85rem 1rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-dim);
+    background: var(--bg-3);
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+  }
+
+  /* Clank World Showcase */
+  .clank-header {
+    margin-bottom: 2.5rem;
+  }
+  .clank-header h3 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+  .clank-header h3 .italic { font-style: italic; color: var(--accent); }
+  .clank-header p {
+    font-size: 1.05rem;
+    color: var(--ink-dim);
+    max-width: 720px;
+    line-height: 1.6;
+  }
+
+  .clank-proof-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .clank-card {
+    background: var(--bg-3);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: zoom-in;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+  .clank-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.5), 0 0 25px rgba(255, 75, 31, 0.1);
+  }
+  .clank-card-img-wrap {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: #080808;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .clank-card-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: transform 0.4s;
+  }
+  .clank-card-img-wrap img.contain-fit {
+    object-fit: contain;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .clank-card:hover .clank-card-img-wrap img {
+    transform: scale(1.04);
+  }
 
   /* ============ WORK / PORTFOLIO ============ */
   .portfolio {
@@ -537,24 +856,6 @@
     opacity: 0.85;
   }
 
-  .play-icon {
-    width: 36px; height: 36px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.15);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s;
-    border: 1px solid rgba(255,255,255,0.1);
-  }
-  .work-card:hover .play-icon {
-    background: var(--accent);
-    transform: scale(1.1);
-    border-color: var(--accent);
-  }
-
   .work-info h4 {
     font-family: 'Fraunces', serif;
     font-size: 1.4rem;
@@ -578,81 +879,6 @@
     letter-spacing: 0.1em;
     opacity: 0.75;
   }
-
-  /* ============ SERVICES ============ */
-  .services {
-    background: var(--bg-2);
-    color: var(--ink);
-    padding: 6rem 2rem;
-    position: relative;
-    overflow: hidden;
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-  }
-
-  .services-inner { max-width: 1400px; margin: 0 auto; }
-
-  .services h2 {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    line-height: 1;
-    letter-spacing: -0.03em;
-    margin-bottom: 4rem;
-    max-width: 700px;
-    font-weight: 400;
-  }
-  .services h2 .italic { font-style: italic; color: var(--accent); }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-
-  .service-card {
-    background: var(--bg-3);
-    border: 1px solid var(--line);
-    padding: 2rem;
-    border-radius: 12px;
-    transition: all 0.4s;
-    position: relative;
-    overflow: hidden;
-  }
-  .service-card:hover {
-    background: var(--accent);
-    border-color: var(--accent);
-    transform: translateY(-8px);
-    box-shadow: 0 16px 40px var(--accent-glow);
-  }
-
-  .service-num {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem;
-    color: var(--accent);
-    margin-bottom: 1.5rem;
-    transition: color 0.3s;
-  }
-  .service-card:hover .service-num { color: var(--bg); }
-
-  .service-card h3 {
-    font-family: 'Fraunces', serif;
-    font-size: 1.75rem;
-    line-height: 1.1;
-    margin-bottom: 1rem;
-    font-weight: 400;
-    color: var(--ink);
-    transition: color 0.3s;
-  }
-  .service-card:hover h3 { color: var(--bg); }
-  .service-card h3 .italic { font-style: italic; }
-
-  .service-card p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: var(--ink-dim);
-    transition: color 0.3s;
-  }
-  .service-card:hover p { color: var(--bg); }
 
   /* ============ CONTACT ============ */
   .contact {
@@ -736,21 +962,89 @@
     transform: translateY(0);
   }
 
+  /* ============ LIGHTBOX MODAL ============ */
+  .lightbox-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .lightbox-modal.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .lightbox-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .lightbox-content img {
+    max-width: 100%;
+    max-height: 82vh;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.8);
+  }
+  .lightbox-caption {
+    margin-top: 1rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--ink);
+    text-align: center;
+  }
+  .lightbox-close {
+    position: absolute;
+    top: -2.5rem;
+    right: 0;
+    background: none;
+    border: none;
+    color: var(--ink);
+    font-size: 2.2rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.3s;
+  }
+  .lightbox-close:hover { color: var(--accent); }
+
   /* ============ RESPONSIVE ============ */
+  @media (max-width: 1100px) {
+    .higgs-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+    .higgs-video-col { max-width: 380px; margin: 0 auto; }
+    .metrics-grid-4 { grid-template-columns: repeat(2, 1fr); }
+    .leaderboard-banner { grid-template-columns: 1fr; gap: 2rem; }
+    .clank-proof-grid { grid-template-columns: 1fr; }
+    .proof-row { grid-template-columns: 1fr; }
+  }
+
   @media (max-width: 900px) {
     nav { padding: 1rem; }
     .nav-links { display: none; }
     .hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 4rem; }
     .hero-photo { max-width: 400px; margin: 0 auto; }
     .stats-header, .portfolio-header { grid-template-columns: 1fr; gap: 2rem; }
-    .stats-grid { grid-template-columns: repeat(2, 1fr); }
-    .stat { border-right: none; border-bottom: 1px solid var(--line); }
-    .stat:nth-child(2) { border-right: none; }
-    .stat:nth-child(odd) { border-right: 1px solid var(--line); }
-    .stat:nth-last-child(-n+2) { border-bottom: none; }
-    .services-grid, .portfolio-grid { grid-template-columns: 1fr; }
-    .stats, .about, .services, .portfolio, .contact { padding: 4rem 1.5rem; }
+    .portfolio-grid { grid-template-columns: 1fr; }
+    .stats, .about, .portfolio, .contact, .featured-showcase { padding: 4rem 1.5rem; }
     footer { flex-direction: column; gap: 1rem; }
+  }
+
+  @media (max-width: 600px) {
+    .metrics-grid-4 { grid-template-columns: 1fr 1fr; }
+    .leaderboard-stats-grid { grid-template-columns: 1fr; }
+    .spotlight-card { padding: 1.5rem; }
+    .leaderboard-banner { padding: 1.5rem; }
   }
 </style>
 </head>
@@ -759,6 +1053,7 @@
 <nav>
   <div class="logo">Ty McGuire<span class="dot">.</span></div>
   <ul class="nav-links">
+    <li><a href="#featured">Highlights</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#work">Work</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -769,28 +1064,27 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-text reveal">
-    <div class="hero-meta">UGC Creator · Available for Projects · 2026</div>
+    <div class="hero-meta">UGC Creator · TikTok &amp; Reels</div>
     <h1 class="hero-name">
       Ty<br>
       <span class="italic">McGuire</span>
     </h1>
-    <div class="hero-tagline">UGC Creator · E-Comm Strategist</div>
+    <div class="hero-tagline">20+ Million Organic Views</div>
     <p class="hero-sub">
-      Authentic, high-performing user-generated content for brands that want results.
-      Turning scrolls into sales every single day.
+      I create organic short-form videos for brands that want real attention and real results. High-retention hooks, authentic storytelling, and content people actually watch.
     </p>
     <div class="hero-stats">
       <div class="hero-stat">
-        <span class="stat-num">10M+</span>
-        <span class="stat-label">Personal UGC Views</span>
+        <span class="stat-num">20M+</span>
+        <span class="stat-label">Organic Views</span>
       </div>
       <div class="hero-stat">
         <span class="stat-num">10M+</span>
-        <span class="stat-label">Views From Managed Campaigns</span>
+        <span class="stat-label">Managed</span>
       </div>
     </div>
     <div class="hero-actions">
-      <a href="#work" class="btn btn-primary">View My Work →</a>
+      <a href="#featured" class="btn btn-primary">View Highlights →</a>
       <a href="#contact" class="btn btn-secondary">Let's Talk</a>
     </div>
   </div>
@@ -805,57 +1099,271 @@
 <!-- MARQUEE -->
 <div class="marquee">
   <div class="marquee-track">
-    <span class="marquee-item">Lifestyle</span>
-    <span class="marquee-item">Beauty</span>
-    <span class="marquee-item">Tech</span>
-    <span class="marquee-item">Fitness</span>
-    <span class="marquee-item">Finance</span>
+    <span class="marquee-item">20M+ Views</span>
+    <span class="marquee-item">Higgsfield AI</span>
+    <span class="marquee-item">Clank World</span>
+    <span class="marquee-item">TikTok Shop</span>
     <span class="marquee-item">E-Commerce</span>
-    <span class="marquee-item">Apparel</span>
-    <span class="marquee-item">Food &amp; Bev</span>
-    <span class="marquee-item">Lifestyle</span>
-    <span class="marquee-item">Beauty</span>
-    <span class="marquee-item">Tech</span>
-    <span class="marquee-item">Fitness</span>
+    <span class="marquee-item">Beauty &amp; Lifestyle</span>
+    <span class="marquee-item">Tech &amp; Apps</span>
     <span class="marquee-item">Finance</span>
+    <span class="marquee-item">20M+ Views</span>
+    <span class="marquee-item">Higgsfield AI</span>
+    <span class="marquee-item">Clank World</span>
+    <span class="marquee-item">TikTok Shop</span>
     <span class="marquee-item">E-Commerce</span>
-    <span class="marquee-item">Apparel</span>
-    <span class="marquee-item">Food &amp; Bev</span>
+    <span class="marquee-item">Beauty &amp; Lifestyle</span>
+    <span class="marquee-item">Tech &amp; Apps</span>
+    <span class="marquee-item">Finance</span>
   </div>
 </div>
-
 
 <!-- ABOUT -->
 <section class="about" id="about">
   <div class="reveal">
     <div class="section-label">About Me</div>
-    <h2>Creating content that <span class="italic">converts.</span></h2>
+    <h2>Videos made to <span class="italic">perform.</span></h2>
     <p class="about-bio">
-      I'm Ty McGuire, a UGC creator that treats your budget like my own.
-      I don't just focus on making content that <strong>looks good</strong>. I make content that <strong>drives action</strong>.
-      I've personally generated over <strong>$500K for brands directly from my videos</strong>,
-      and I've successfully scaled mass volume affiliate marketing campaigns focused purely on conversion.
+      I'm Ty McGuire, a short-form content creator who treats your brand's budget like my own. I focus on creating videos that capture attention in the first 2 seconds and keep viewers engaged until the end. With over 20M+ organic views generated, the goal is simple: make great content that drives real action.
     </p>
 
     <div class="credentials">
       <div class="cred">
         <span class="cred-num">/01</span>
-        <span class="cred-text">$500K+ <span class="italic">Generated for Brands</span></span>
+        <span class="cred-text">20M+ <span class="italic">Organic Views</span></span>
       </div>
       <div class="cred">
         <span class="cred-num">/02</span>
-        <span class="cred-text">Mass Volume <span class="italic">Affiliate Background</span></span>
-      </div>
-      <div class="cred">
-        <span class="cred-num">/03</span>
-        <span class="cred-text">Worked with brands like <span class="italic">Cluely &amp; Bolt.new</span></span>
+        <span class="cred-text">10M+ <span class="italic">Managed Campaign Views</span></span>
       </div>
       <div class="cred" style="border-bottom: 1px solid var(--line);">
-        <span class="cred-num">/04</span>
-        <span class="cred-text">Bachelor's Degree <span class="italic">in Finance</span></span>
+        <span class="cred-num">/03</span>
+        <span class="cred-text">Top Creator <span class="italic">within Good Marketing</span></span>
       </div>
     </div>
   </div>
+</section>
+
+<!-- ============ FEATURED SHOWCASE / BREAKTHROUGHS ============ -->
+<section class="featured-showcase" id="featured">
+  
+  <div class="featured-header reveal">
+    <div class="section-label">Highlights</div>
+    <h2>Recent Highlights &amp; <span class="italic">Campaigns.</span></h2>
+    <p>
+      Recent organic campaigns for brands like Higgsfield AI and Clank World, showing proven performance across TikTok and Instagram.
+    </p>
+  </div>
+
+  <!-- 1. DISCORD LEADERBOARD BANNER -->
+  <div class="leaderboard-banner reveal">
+    <div class="leaderboard-content">
+      <h3>#1 Creator <span class="italic">within Good Marketing.</span></h3>
+      <p class="leaderboard-desc">
+        Currently top creator within Good Marketing. Delivered 9.5M+ views in just 14 days with an exceptional $0.99 average CPM and 8% organic engagement rate across Higgsfield AI and Clank World.
+      </p>
+
+      <div class="leaderboard-stats-grid">
+        <div class="l-stat-box">
+          <div class="l-stat-val">#1</div>
+          <div class="l-stat-lbl">Agency Rank</div>
+        </div>
+        <div class="l-stat-box">
+          <div class="l-stat-val">9.5M</div>
+          <div class="l-stat-lbl">Views in 14 Days</div>
+        </div>
+        <div class="l-stat-box">
+          <div class="l-stat-val">$0.99</div>
+          <div class="l-stat-lbl">Average CPM (40 Posts)</div>
+        </div>
+        <div class="l-stat-box">
+          <div class="l-stat-val">8.0%</div>
+          <div class="l-stat-lbl">Avg Engagement Rate</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="leaderboard-img-wrap" data-img="assets/discord-leaderboard.png" data-caption="Good Marketing Discord Leaderboard — Ty McGuire ranked #1 with 9.5M views in 14 days">
+      <img src="assets/discord-leaderboard.png" alt="Discord Leaderboard Proof showing Ty McGuire ranked #1 in Good Marketing" loading="lazy" />
+      <div class="img-zoom-hint">Click to Zoom ↗</div>
+    </div>
+  </div>
+
+  <!-- 2. HIGGSFIELD AI SPOTLIGHT -->
+  <div class="spotlight-card reveal">
+    
+    <div class="higgs-layout">
+      
+      <!-- Video Column -->
+      <div class="higgs-video-col">
+        <div class="higgs-video-frame">
+          <div class="video-floating-badge">6.3M Views</div>
+          <video src="assets/higgsfield-6.3m-viral.mp4" autoplay loop muted playsinline controls></video>
+        </div>
+        <div class="higgs-notice-box">
+          <strong>⚠️ Cease &amp; Desist Note:</strong> This video hit <strong>6.3M+ views</strong> and was removed from live platform feeds due to a third-party C&amp;D. Preserved here as the original raw master.
+        </div>
+      </div>
+
+      <!-- Details Column -->
+      <div class="higgs-details-col">
+        <h3>Higgsfield AI: <span class="italic">8.5M Views</span></h3>
+        <p>
+          Generated 8.5 million views within the first 3 weeks of posting, with a single video record of 6.3M views and a $10,050 payout.
+        </p>
+
+        <div class="metrics-grid-4">
+          <div class="metric-card">
+            <div class="num">8.5M</div>
+            <div class="lbl">Views in 3 Weeks</div>
+          </div>
+          <div class="metric-card">
+            <div class="num">$1.33</div>
+            <div class="lbl">Campaign CPM</div>
+          </div>
+          <div class="metric-card">
+            <div class="num">6.3M</div>
+            <div class="lbl">Peak Single Video</div>
+          </div>
+          <div class="metric-card">
+            <div class="num">$10K+</div>
+            <div class="lbl">Single Post Payout</div>
+          </div>
+        </div>
+
+        <div class="higgs-proof-grid">
+          
+          <div class="proof-item" data-img="assets/discord-10k-payout.png" data-caption="Discord Announcement: $10,050 Payout for 5M+ post hit by Ty McGuire">
+            <div class="proof-img-frame">
+              <img src="assets/discord-10k-payout.png" alt="Discord 10k Payout Announcement" loading="lazy" />
+            </div>
+            <div class="proof-caption">
+              <span>$10,050 Payout Confirmation</span>
+              <span style="color: var(--accent);">Zoom ↗</span>
+            </div>
+          </div>
+
+          <div class="proof-item" data-img="assets/higgsfield-ig-reel-insights.png" data-caption="Instagram Reel Insights: 6,344,719 Views, 235K Likes, 216K Saves">
+            <div class="proof-img-frame">
+              <img src="assets/higgsfield-ig-reel-insights.png" alt="Instagram 6.3M Reel Insights" loading="lazy" />
+            </div>
+            <div class="proof-caption">
+              <span>6.34M Reel Analytics</span>
+              <span style="color: var(--accent);">Zoom ↗</span>
+            </div>
+          </div>
+
+          <div class="proof-item" data-img="assets/higgsfield-tiktok-insights.png" data-caption="TikTok Video Analytics: 743.7K Views, 69K Likes, 31K Saves">
+            <div class="proof-img-frame">
+              <img src="assets/higgsfield-tiktok-insights.png" alt="TikTok 743.7K Analytics" loading="lazy" />
+            </div>
+            <div class="proof-caption">
+              <span>743.7K TikTok Analytics</span>
+              <span style="color: var(--accent);">Zoom ↗</span>
+            </div>
+          </div>
+
+          <div class="proof-item" data-img="assets/higgsfield-ig-profile.jpg" data-caption="Instagram Profile @tys.ai.tips: 27K Followers, 7.3M Views in 30 Days">
+            <div class="proof-img-frame">
+              <img src="assets/higgsfield-ig-profile.jpg" alt="Instagram Profile @tys.ai.tips" loading="lazy" />
+            </div>
+            <div class="proof-caption">
+              <span>Instagram Profile (@tys.ai.tips)</span>
+              <span style="color: var(--accent);">Zoom ↗</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 3. CLANK WORLD SPOTLIGHT -->
+  <div class="spotlight-card reveal">
+    
+    <div class="higgs-layout" style="margin-bottom: 3rem;">
+      
+      <!-- Video Column -->
+      <div class="higgs-video-col">
+        <div class="higgs-video-frame">
+          <div class="video-floating-badge">423K Views</div>
+          <video src="assets/clank-orange.mp4" autoplay loop muted playsinline controls></video>
+        </div>
+        <div class="higgs-notice-box" style="background: rgba(255, 75, 31, 0.05); border-color: rgba(255, 75, 31, 0.25);">
+          <strong>423,000+ views</strong> across platforms: 244,000+ on TikTok and 179,000+ on Instagram.
+        </div>
+      </div>
+
+      <!-- Details Column -->
+      <div class="higgs-details-col">
+        <h3>Clank World: <span class="italic">1M+ Views in 8 Posts at $0.54 CPM</span></h3>
+        <p>
+          Generated over 1 million views across the first 8 posts at a $0.54 CPM, with the top video hitting 423,000+ views across TikTok (244K+) and Instagram (179K+).
+        </p>
+
+        <div class="metrics-grid-4">
+          <div class="metric-card">
+            <div class="num">1.2M+</div>
+            <div class="lbl">Total Campaign Views</div>
+          </div>
+          <div class="metric-card">
+            <div class="num">$0.54</div>
+            <div class="lbl">Effective CPM</div>
+          </div>
+          <div class="metric-card">
+            <div class="num">423K</div>
+            <div class="lbl">Top Video Views</div>
+          </div>
+          <div class="metric-card">
+            <div class="num">8 Posts</div>
+            <div class="lbl">To 1M+ Views</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="clank-proof-grid">
+      
+      <!-- Dashboard Card -->
+      <div class="clank-card" data-img="assets/clank-dashboard.jpg" data-caption="Clank.world Dashboard: 1.2M Views, $0.54 Effective CPM">
+        <div class="clank-card-img-wrap">
+          <img src="assets/clank-dashboard.jpg" class="contain-fit" alt="Clank.world Dashboard Proof" loading="lazy" />
+        </div>
+        <div class="proof-caption">
+          <span>Clank.world Dashboard ($0.54 CPM)</span>
+          <span style="color: var(--accent);">Zoom ↗</span>
+        </div>
+      </div>
+
+      <!-- TikTok Grid -->
+      <div class="clank-card" data-img="assets/clank-tiktok-grid.png" data-caption="TikTok Account @ty.dailyy: 244.5K & 162.7K viral posts">
+        <div class="clank-card-img-wrap">
+          <img src="assets/clank-tiktok-grid.png" alt="TikTok Campaign Grid @ty.dailyy" loading="lazy" />
+        </div>
+        <div class="proof-caption">
+          <span>TikTok Campaign (@ty.dailyy)</span>
+          <span style="color: var(--accent);">Zoom ↗</span>
+        </div>
+      </div>
+
+      <!-- Instagram Grid -->
+      <div class="clank-card" data-img="assets/clank-instagram-grid.png" data-caption="Instagram Account @tys_yappin: 179K, 134K, 102K, 95.9K views">
+        <div class="clank-card-img-wrap">
+          <img src="assets/clank-instagram-grid.png" alt="Instagram Campaign Grid @tys_yappin" loading="lazy" />
+        </div>
+        <div class="proof-caption">
+          <span>Instagram Campaign (@tys_yappin)</span>
+          <span style="color: var(--accent);">Zoom ↗</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 
 <!-- WORK / PORTFOLIO -->
@@ -863,7 +1371,7 @@
   <div class="portfolio-header reveal">
     <div>
       <div class="section-label">Selected Work</div>
-      <h2>Recent <span class="italic">projects.</span></h2>
+      <h2>Additional <span class="italic">client projects.</span></h2>
     </div>
   </div>
 
@@ -917,10 +1425,32 @@
       </div>
     </div>
     <div class="work-card">
-      <video src="assets/Content Rewards.mp4" autoplay loop muted playsinline controls></video>
+      <video src="assets/vugola.mp4" autoplay loop muted playsinline controls></video>
       <div class="work-placeholder">
         <div class="work-top">
           <span>05</span>
+        </div>
+        <div class="work-info">
+          <h4>Vugola</h4>
+        </div>
+      </div>
+    </div>
+    <div class="work-card">
+      <video src="assets/Happenstance.mp4" autoplay loop muted playsinline controls></video>
+      <div class="work-placeholder">
+        <div class="work-top">
+          <span>06</span>
+        </div>
+        <div class="work-info">
+          <h4>Happenstance</h4>
+        </div>
+      </div>
+    </div>
+    <div class="work-card">
+      <video src="assets/Content Rewards.mp4" autoplay loop muted playsinline controls></video>
+      <div class="work-placeholder">
+        <div class="work-top">
+          <span>07</span>
         </div>
         <div class="work-info">
           <h4>Content Rewards</h4>
@@ -931,7 +1461,7 @@
       <video src="assets/Polifly.io.mp4" autoplay loop muted playsinline controls></video>
       <div class="work-placeholder">
         <div class="work-top">
-          <span>06</span>
+          <span>08</span>
         </div>
         <div class="work-info">
           <h4>Polifly.io</h4>
@@ -942,7 +1472,7 @@
       <video src="assets/Tesana.ai.MP4" autoplay loop muted playsinline controls></video>
       <div class="work-placeholder">
         <div class="work-top">
-          <span>07</span>
+          <span>09</span>
         </div>
         <div class="work-info">
           <h4>Tesana.ai</h4>
@@ -953,7 +1483,7 @@
       <video src="assets/WeltPixel.mp4" autoplay loop muted playsinline controls></video>
       <div class="work-placeholder">
         <div class="work-top">
-          <span>08</span>
+          <span>10</span>
         </div>
         <div class="work-info">
           <h4>WeltPixel</h4>
@@ -961,21 +1491,10 @@
       </div>
     </div>
     <div class="work-card">
-      <video src="assets/vugola.mp4" autoplay loop muted playsinline controls></video>
-      <div class="work-placeholder">
-        <div class="work-top">
-          <span>09</span>
-        </div>
-        <div class="work-info">
-          <h4>Vugola</h4>
-        </div>
-      </div>
-    </div>
-    <div class="work-card">
       <video src="assets/TreadeVisor.AI.MOV" autoplay loop muted playsinline controls></video>
       <div class="work-placeholder">
         <div class="work-top">
-          <span>10</span>
+          <span>11</span>
         </div>
         <div class="work-info">
           <h4>TreadeVisor.AI</h4>
@@ -989,14 +1508,12 @@
 <section class="portfolio" id="mass-affiliate" style="padding-top: 4rem; padding-bottom: 4rem;">
   <div class="reveal" style="display: flex; flex-wrap: wrap; gap: 4rem; max-width: 850px; margin: 0 auto; align-items: center; justify-content: center;">
     
-    <!-- Image on the left -->
     <div style="flex: 1 1 300px; max-width: 300px;">
       <div class="work-card" style="aspect-ratio: auto; padding-bottom: 0; border: none; background: transparent;">
         <img src="assets/Mass content.jpg" style="display: block; width: 100%; border-radius: 8px; box-shadow: 0 20px 50px rgba(0,0,0,0.4), 0 0 30px rgba(255, 75, 31, 0.1);" alt="Mass Affiliate Content at Scale">
       </div>
     </div>
 
-    <!-- Text on the right -->
     <div style="flex: 1 1 400px; text-align: left; color: #ffffff;">
       <div class="section-label" style="justify-content: flex-start; margin-bottom: 1rem;">TikTok Shop</div>
       <h2 style="font-size: clamp(2rem, 4vw, 2.5rem); margin-bottom: 1.5rem; line-height: 1.1;">Mass Affiliate Content<br><span class="italic">at Scale.</span></h2>
@@ -1027,7 +1544,6 @@
   </div>
 </section>
 
-
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="reveal">
@@ -1054,7 +1570,17 @@
   </div>
 </footer>
 
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox-modal" id="lightboxModal">
+  <div class="lightbox-content">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close modal">&times;</button>
+    <img src="" id="lightboxImg" alt="Expanded proof snapshot" />
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+</div>
+
 <script>
+  // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -1064,6 +1590,35 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Lightbox Modal Functionality
+  const modal = document.getElementById('lightboxModal');
+  const modalImg = document.getElementById('lightboxImg');
+  const modalCaption = document.getElementById('lightboxCaption');
+  const closeBtn = document.getElementById('lightboxClose');
+
+  document.querySelectorAll('[data-img]').forEach(item => {
+    item.addEventListener('click', () => {
+      const src = item.getAttribute('data-img');
+      const caption = item.getAttribute('data-caption') || '';
+      modalImg.src = src;
+      modalCaption.textContent = caption;
+      modal.classList.add('active');
+    });
+  });
+
+  const closeModal = () => {
+    modal.classList.remove('active');
+    modalImg.src = '';
+  };
+
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+  });
 </script>
 
 <!-- Cal element-click embed code begins -->
